@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>Styling Header and Footer</title>
+		<link rel="stylesheet" type="text/css" href="mystyle.css"/>
+	</head>
+	<body>
+		<div id="main">
+			<div id="header">
+				<div id="logo">
+					<div id="logo_text">
+						<h1><a href="#">Human Resource <span class="logo_color">management system</span></a></h1>
+						<h2>employee registration.</h2>
+					</div>
+				</div>
+				
+				<div id="menubar">
+					<ul id="menu">
+						<li class="selected"><a href="frmhome.html">Home</a></li>
+						
+						<li>
+							<a href="EmployeeRegistration.html">Register details.</a>
+						</li>
+						<li>
+						<a href="frmemp_display.php">Display Empl.</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="page">
+				<table>
+					<form action="{{ url_for('predict')}}"method="post">
+					<tr>	
+						<td>Experience      	<input type="text" name="experience" placeholder="Experience" required="required" /></td>	
+						<td>Test Score    		<input type="text" name="test_score" placeholder="Test Score" required="required" /></td>
+					</tr>
+					<tr>
+						<td>	Interview score		<input type="text" name="interview_score" placeholder="Interview Score" required="required" /></td>
+						<td>	Gender				<input type="text" name="gender" placeholder="age//  1- male ,0-female" required="required"/></td>
+					</tr>
+					<tr>	
+						<td>Expe 				<input type="text" name="expe" placeholder="Expe" required="required" /></td>
+						<td>	T					<input type="text" name="t" placeholder="T" required="required" /></td>
+					</tr>
+					<tr>
+						<td>	Experienc			<input type="text" name="experienc" placeholder="Experienc" required="required" /></td>
+						<td>	Test scor			<input type="text" name="test_scor" placeholder="Test Scor" required="required" /></td>
+					</tr>
+					<tr>
+						<td>	Employ department	<input type="text" name="a" placeholder="emp department// (devepolment-1, sales-2,hr-3, data science-0,r&d-4, fiance-2)" required="required" /></td>
+						<td>	education			<input type="text" name="b" placeholder="edu background// (marketing-1,life science-2,hr-3,medical-4,tcchnical-4,other-4)" required="required" /></td>
+					</tr>
+					<tr>
+						<td>	C					<input type="text" name="c" placeholder="C" required="required" /></td>
+						<td>	D					<input type="text" name="d" placeholder="D" required="required" /></td>
+					</tr>
+					<tr>
+						<td>	E					<input type="text" name="e" placeholder="E" required="required" /></td>
+						<td>	F					<input type="text" name="f" placeholder="F" required="required" /></td>
+					</tr>
+					<tr>
+						<td>	G					<input type="text" name="g" placeholder="G" required="required" /></td>
+						
+					</tr>
+					
+					<td colspan=2>	<input type="submit" name="Update" value="Update" onClick="return validate();"  /><br></td>
+					</form>
+					</table>
+     <h3 style="text-align:center; color:salmon;" >{{ prediction_text }}</h3>
+     <h2 style="text-align:center; color:black;" >(4-Good),     (3-average),        ( 2-needs improvement)</h2>
+		<br>
+			</div>
+			
+			<div id="footer">
+				<p><a href="frmhome.php">Home</a> | <a href="EmployeeRegistration.php">Register Emp.</a>  | <a href="frmattendance.php">Attedance</a> | <a href="frmmonthsalary.php">Salary</a></p>
+
+				<p>CONTACT | <a href="https://mail.google.com">Email</a> | <a href="https://www.facebook.com/">Facebook</a> | <a href="https://www.linkedin.com/feed/">Linkedin </a></p>
+			</div>
+		</div>
+	</body>
+</html>

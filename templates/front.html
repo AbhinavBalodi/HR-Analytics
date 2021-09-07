@@ -1,0 +1,92 @@
+<html>
+<head>
+
+</head>
+
+<body bgcolor="purple">
+ <div class="login">
+	<h1 style="text-align:center; color:LightSkyBlue;">HR ANALYTICS USING MACHINE LEARNING</h1>
+     <h2 style="text-align:center; color:yellow;">Predict The Performance Rating of Employee</h2>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+
+        <style>
+input[type=text]{
+    width:33%;
+    border:4px solid #aaa;
+    border-radius:8px;
+    margin:8px 0;
+    outline:green;
+    padding:12px;
+    box-sizing:border-box;
+    transition:.3s;
+  }
+
+  input[type=text]:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+  }
+    
+
+        </style>
+
+ <div class="login">
+
+
+     <!-- Main Input For Receiving Query to our ML -->
+        <form  align="center" ;action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="experience" placeholder="Emp environment satisfaction" required="required" />
+        <input type="text" name="test_score" placeholder="Emp hourly rate" required="required" />
+	<input type="text" name="interview_score" placeholder="No of projects working" required="required" />
+        <input type="text" name="gender" placeholder="Emp job level" required="required"/>
+        <input type="text" name="expe" placeholder="Emp job satisfaction"required" />
+        <input type="text" name="t" placeholder="No of companies worked" required="required" />
+        <input type="text" name="experienc" placeholder="overtime//  1-yes 0-no" required="required" />
+        <input type="text" name="test_scor" placeholder="employee last salery hike percentage" required="required" />
+        <input type="text" name="a" placeholder="total work experience" required="required" />
+        <input type="text" name="b" placeholder="no of professtional training" required="required" />
+        <input type="text" name="c" placeholder="Experience years in present company " required="required" />
+        <input type="text" name="d" placeholder="experience yaers in current role" required="required" />
+        <input type="text" name="e" placeholder="no of promotions" required="required" />
+        <input type="text" name="f" placeholder="years with current manager" required="required" />
+        <input type="text" name="g" placeholder="attrition // 1-yes 0-no" required="required" />
+         <style>
+          button{
+
+ background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+button:hover
+{
+
+
+  box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee,
+              0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
+  text-shadow: 0 0 5px #15f4ee, 0 0 5px #15f4ee;            
+}
+</style>
+        <button>PREDICT</button>
+    </form>
+     <tr>
+     <a href="conclu.html">analysis details</a>
+     </tr>
+   <br>
+   <br>
+     <h2 style="text-align:center; color:salmon;" >{{ prediction_text }}</h2>
+     
+     
+
+
+ </div>
+
+     
+</body>
+</html>
